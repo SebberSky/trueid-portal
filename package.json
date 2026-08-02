@@ -1,0 +1,16 @@
+{
+  "name": "trueid-portal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs",
+    "share-info": "node scripts/share-info.mjs",
+    "restart:host": "bash scripts/jenkins-restart.sh",
+    "funnel:paths": "bash scripts/configure-funnel-paths.sh"
+  },
+  "devDependencies": {
+    "pm2": "^6.0.14"
+  }
+}
