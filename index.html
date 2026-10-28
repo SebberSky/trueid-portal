@@ -147,12 +147,12 @@
         position: relative;
         z-index: 4;
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        grid-template-rows: 1fr;
-        gap: 0;
-        padding: clamp(7rem, 18vh, 10rem) 0 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 0.5rem 0;
+        padding: clamp(7rem, 16vh, 9.5rem) 0 2rem;
         width: 100%;
         min-height: 100dvh;
+        align-content: center;
       }
 
       .star {
@@ -173,7 +173,12 @@
       }
 
       .star--poker,
-      .star--office {
+      .star--office,
+      .star--grafana,
+      .star--voting,
+      .star--flowforge,
+      .star--ownership,
+      .star--approvals {
         justify-self: stretch;
         align-self: stretch;
         margin: 0;
@@ -298,13 +303,10 @@
       @media (max-width: 780px) {
         .field {
           grid-template-columns: 1fr;
-          grid-template-rows: repeat(3, minmax(230px, 1fr));
         }
 
-        .star--office,
-        .star--poker {
-          justify-self: stretch;
-          margin: 0;
+        .star {
+          min-height: 220px;
         }
 
         .brand {
@@ -367,6 +369,38 @@
           </span>
           <span class="star__name">Grafana</span>
           <span class="star__desc">Monitoring dashboards — สุขภาพระบบและ CI / QCC metrics</span>
+        </a>
+
+        <a class="star star--voting" href="https://trueid-voting.chawapon-rr.chatgpt.site/" target="_blank" rel="noopener noreferrer">
+          <span class="star__icon-wrap">
+            <img class="star__icon" src="./assets/voting.svg" width="128" height="128" alt="" />
+          </span>
+          <span class="star__name">Voting</span>
+          <span class="star__desc">โหวตทีม ดูอันดับ และประวัติกิจกรรม</span>
+        </a>
+
+        <a class="star star--flowforge" href="https://flowforge-mobilewright.chawapon-rr.chatgpt.site/" target="_blank" rel="noopener noreferrer">
+          <span class="star__icon-wrap">
+            <img class="star__icon" src="./assets/flowforge.svg" width="128" height="128" alt="" />
+          </span>
+          <span class="star__name">Flowforge</span>
+          <span class="star__desc">Jira → Mobilewright script generator</span>
+        </a>
+
+        <a class="star star--ownership" href="https://trueid-assignee-report.chawapon-rr.chatgpt.site/" target="_blank" rel="noopener noreferrer">
+          <span class="star__icon-wrap">
+            <img class="star__icon" src="./assets/ownership.svg" width="128" height="128" alt="" />
+          </span>
+          <span class="star__name">Ownership</span>
+          <span class="star__desc">Ticket / PR ownership report รายคน</span>
+        </a>
+
+        <a class="star star--approvals" href="https://trueid-review-approvals.chawapon-rr.chatgpt.site/" target="_blank" rel="noopener noreferrer">
+          <span class="star__icon-wrap">
+            <img class="star__icon" src="./assets/approvals.svg" width="128" height="128" alt="" />
+          </span>
+          <span class="star__name">Approvals</span>
+          <span class="star__desc">Bitbucket PR approval stats รายเดือน</span>
         </a>
       </div>
     </main>
